@@ -3,7 +3,7 @@
 
 gravitational_constant = 6.67408E-11
 """Гравитационная постоянная Ньютона G"""
-
+''' '''
 
 def calculate_force(body, space_objects):
     """Вычисляет силу, действующую на тело.
