@@ -44,7 +44,19 @@ def parse_star_parameters(line, star):
     **star** — объект звезды.
     """
 
-    pass  # FIXME: not done yet
+    list = []
+    for i in line.split():
+        list.append(str(i))
+
+    star.type = list[0]
+    star.R = list[1]
+    star.color = list[2]
+    star.m = list[3]
+    star.x = list[4]
+    star.y = list[5]
+    star.Vx = list[6]
+    star.Vy = list[7]
+
 
 def parse_planet_parameters(line, planet):
     """Считывает данные о планете из строки.
@@ -61,7 +73,19 @@ def parse_planet_parameters(line, planet):
     **line** — строка с описание планеты.
     **planet** — объект планеты.
     """
-    pass  # FIXME: not done yet...
+
+    list = []
+    for i in line.split():
+        list.append(str(i))
+
+    planet.type = list[0]
+    planet.R = list[1]
+    planet.color = list[2]
+    planet.m = list[3]
+    planet.x = list[4]
+    planet.y = list[5]
+    planet.Vx = list[6]
+    planet.Vy = list[7]
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
@@ -79,6 +103,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
         for obj in space_objects:
             print(out_file, "%s %d %s %f" % ('1', 2, '3', 4.5))
             # FIXME: should store real values
+
 
 # FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
 
