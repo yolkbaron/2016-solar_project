@@ -44,9 +44,7 @@ def parse_star_parameters(line, star):
     **star** — объект звезды.
     """
 
-    list = []
-    for i in line.split():
-        list.append(str(i))
+    list = [str(i) for i in line.split()]
 
     star.type = list[0]
     star.R = list[1]
