@@ -1,6 +1,5 @@
 # coding: utf-8
 # license: GPLv3
-G = gravitational_constant
 gravitational_constant = 6.67408E-11
 
 """Гравитационная постоянная Ньютона G"""
@@ -19,6 +18,7 @@ def calculate_force(body, space_objects):
     body.Fx = body.Fy = 0
 
     for obj in space_objects:
+        G = gravitational_constant
         if body == obj:
             continue  # тело не действует гравитационной силой на само себя!
         else:
