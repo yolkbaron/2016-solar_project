@@ -46,7 +46,7 @@ def parse_star_parameters(line, star):
 
     list = [i for i in line.split()]
 
-    star.type = list.[0].lower()
+    star.type = list[0].lower()
     star.R = int(list[1])
     star.color = list[2]
     star.m = int(list[3])
