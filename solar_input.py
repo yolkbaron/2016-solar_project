@@ -77,13 +77,13 @@ def parse_planet_parameters(line, planet):
     list = line.split()
 
     planet.type = list[0].lower()
-    planet.R = int(list[1])
+    planet.R = float(format(float(list[1]), "f"))
     planet.color = list[2]
-    planet.m = int(list[3])
-    planet.x = int(list[4])
-    planet.y = int(list[5])
-    planet.Vx = int(list[6])
-    planet.Vy = int(list[7])
+    planet.m = float(format(float(list[3]), "f"))
+    planet.x = float(format(float(list[4]), "f"))
+    planet.y = float(format(float(list[5]), "f"))
+    planet.Vx = float(format(float(list[6]), "f"))
+    planet.Vy = float(format(float(list[7]), "f"))
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
