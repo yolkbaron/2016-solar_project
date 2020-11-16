@@ -103,14 +103,14 @@ def write_space_objects_data_to_file(output_filename, space_objects):
                 type = "Star"
             if obj.type == "planet":
                 type = "Planet"
-            rad = obj.R
+            rad = str(obj.R)
             color = obj.color
-            mass = obj.m
-            x = obj.x
-            y = obj.t
-            Vx = obj.Vx
-            Vy = obj.Vy
-            print(out_file, "%s %d %s %f" % (type , rad, color, mass, x, y, Vx, Vy))
+            mass = str(obj.m)
+            x = str(obj.x)
+            y = str(obj.t)
+            vx = str(obj.Vx)
+            vy = str(obj.Vy)
+            print(out_file, type, rad, color, mass, x, y, vx, vy, sep=' ')
 
 
 # FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
