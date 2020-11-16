@@ -44,7 +44,7 @@ def parse_star_parameters(line, star):
     **star** — объект звезды.
     """
 
-    list = [i for i in line.split()]
+    list = line.splt()
 
     star.type = list[0].lower()
     star.R = int(list[1])
@@ -72,18 +72,16 @@ def parse_planet_parameters(line, planet):
     **planet** — объект планеты.
     """
 
-    list = []
-    for i in line.split():
-        list.append(str(i))
+    list = line.splt()
 
-    planet.type = list[0]
-    planet.R = list[1]
+    planet.type = list[0].lower()
+    planet.R = int(list[1])
     planet.color = list[2]
-    planet.m = list[3]
-    planet.x = list[4]
-    planet.y = list[5]
-    planet.Vx = list[6]
-    planet.Vy = list[7]
+    planet.m = int(list[3])
+    planet.x = int(list[4])
+    planet.y = int(list[5])
+    planet.Vx = int(list[6])
+    planet.Vy = int(list[7])
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
